@@ -1,3 +1,4 @@
+<div class="cust-container">
 <ul class="othr-prdcts-list">
   <?php    
   class getRelatedProducts{
@@ -23,11 +24,11 @@
         <li class="othr-prdcts-list-wrap">
           <div class="othr-prdcts-div">
             <div class="othr-prdcts-img">
-              <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?= the_title(); ?>" />
+              <a href="<?= the_permalink(); ?>"> <img src="<?php echo the_field('other_product_section_image'); ?>" alt="<?= the_title(); ?>" /></a>
             </div>
             <div class="othr-prdcts-content">
               <div class="prdcts-content-inr-wrap">
-              <h3><?= the_title(); ?></h3>
+              <a href="<?= the_permalink(); ?>"><h3><?= the_title(); ?></h3></a>
               <a href="<?= the_permalink(); ?>" class="cmn-circle-btn"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="33.985" height="34" viewBox="0 0 33.985 34">
   <defs>
     <clipPath id="clip-path">
@@ -54,3 +55,4 @@
   $obj->getRelatedProductLists();    
   ?>             
 </ul>
+</div>
